@@ -56,9 +56,17 @@ public class SampleClass {
     public boolean b;
 
     //    implement a custom .equals(SampleClass other){} method here.
+    public boolean equals(SampleClass other) {
 
+        // primitive values contain the actual value, thus == is sufficient
+
+        if (this.a == other.a && this.b == other.b) return true;
+        return false;
+    }
 
     //    implement a custom .toString(){} method here.
-
+    public String toString() {
+        return "" + this.a + " " + this.b;
+    }
     
 }
